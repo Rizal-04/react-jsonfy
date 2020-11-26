@@ -3,7 +3,7 @@ import * as Mui from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
-class Posts extends Component{
+class Todo extends Component{
   constructor(props){
    super(props);
 
@@ -13,7 +13,7 @@ class Posts extends Component{
 }
 
  componentDidMount(){
-   const apiUrl = 'https://jsonfy.com/posts';
+   const apiUrl = 'https://jsonfy.com/todos';
    fetch(apiUrl)
      .then((response) => response.json())
      .then((data) => this.setState({data: data}));
@@ -25,9 +25,9 @@ class Posts extends Component{
 
     return (
       <div >
-            <div class="navbar-fixed">
+           <div class="navbar-fixed">
           <nav >
-          <div class="nav-wrapper #c62828 red darken-3">
+          <div class="nav-wrapper">
             <a href="#" class="brand-logo">JSON fy</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
               <li><a href="/">User</a></li>
@@ -44,26 +44,19 @@ class Posts extends Component{
         </nav>
         </div>
           <Mui.Container fixed>
-        <h1 align="center"> POSTS </h1>
-        <table border="2">
+        <h1 align="center"> TODO </h1>
+        <table align="center" class="striped" border="1">
           <tr bgcolor="#ba000d">
-            <td > ID</td>
-            <td>USE POS FK</td>
-            <td>TITLE</td>
-            <td>EXCERPT</td>
-            <td>BODY</td>
-            <td>DATE ADD</td>
-            <td>DATE UPD</td>
+            <td > </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           {data.map(todo =>
             <tr key={todo.id}>
-              <td>{todo.id}</td>
-              <td>{todo.use_pos_fk}</td>
-              <td>{todo.title}</td>
-              <td>{todo.excerpt}</td>
-              <td>{todo.body}</td>
-              <td>{todo.date_add}</td>
-              <td>{todo.date_upd}</td>
+              <td>{}</td>
+              <td>{}</td>
             </tr>
             )}
         </table>
@@ -74,4 +67,4 @@ class Posts extends Component{
 }
 
 
-export default Posts;
+export default Todo;

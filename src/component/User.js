@@ -25,19 +25,27 @@ class User extends Component{
 
     return (
       <div >
-          <Mui.Toolbar bgcolor="#ba000d">
-                <IconButton edge="start"  color="default" aria-label="menu">
-                <MenuIcon />
-                </IconButton>
-                <Mui.ButtonGroup color="secondary" aria-label="outlined secondary button group">
-                    <Mui.Button href="/">User</Mui.Button>
-                    <Mui.Button href="/comment">Comment</Mui.Button>
-                    <Mui.Button href="/posts">Posts</Mui.Button>
-                </Mui.ButtonGroup>
-         </Mui.Toolbar>
+          <div class="navbar-fixed">
+          <nav >
+          <div class="nav-wrapper #c62828 red darken-3">
+            <a href="#" class="brand-logo">JSON fy</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="/">User</a></li>
+              <li><a href="/comment">Comment</a></li>
+              <li><a href="/posts">Posts</a></li>
+              <li><a href="/album">Albums</a></li>
+              <li><a href="/photos">Photos</a></li>
+              <li><a href="/todo">Todo</a></li>
+              <li><a href="/categori">Categories</a></li>
+              <li><a href="/brands">Brands</a></li>
+              <li><a href="/items">Items</a></li>
+            </ul>
+          </div>
+        </nav>
+        </div>
           <Mui.Container fixed>
         <h1 align="center"> USERS </h1>
-        <table border="1">
+        <table class="striped" border="1">
           <tr bgcolor="#ba000d">
             <td > ID</td>
             <td>NAME</td>
